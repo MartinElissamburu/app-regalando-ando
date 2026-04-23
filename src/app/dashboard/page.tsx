@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import Navigation from "@/components/Navigation";
 
 interface GiftItem {
     id: string;
@@ -179,21 +180,9 @@ export default function Dashboard() {
 
     return (
         <div className="min-h-screen bg-background text-foreground flex flex-col">
-            <header className="sticky top-0 z-50 border-b border-border bg-card/80 backdrop-blur-sm">
-                <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-                    <div className="flex items-center gap-2">
-                        <Gift className="h-5 w-5 text-primary" />
-                        <span className="text-xl font-bold tracking-tight text-foreground">
-                            RegalandoAndo
-                        </span>
-                    </div>
-                    <Button variant="outline" size="sm" onClick={handleLogout}>
-                        Logout
-                    </Button>
-                </div>
-            </header>
+            <Navigation />
 
-            <main className="flex-1 mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+            <main className="flex-1 mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8 pb-24">
                 <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                         <h1 className="text-3xl font-bold tracking-tight text-foreground text-balance">
